@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="15">
+            <item index="0" class="java.lang.String" itemvalue="functools32" />
+            <item index="1" class="java.lang.String" itemvalue="request" />
+            <item index="2" class="java.lang.String" itemvalue="SphinxBase" />
+            <item index="3" class="java.lang.String" itemvalue="subprocess32" />
+            <item index="4" class="java.lang.String" itemvalue="query-string" />
+            <item index="5" class="java.lang.String" itemvalue="darkflow" />
+            <item index="6" class="java.lang.String" itemvalue="torch" />
+            <item index="7" class="java.lang.String" itemvalue="PocketSphinx" />
+            <item index="8" class="java.lang.String" itemvalue="sloth" />
+            <item index="9" class="java.lang.String" itemvalue="go-vncdriver" />
+            <item index="10" class="java.lang.String" itemvalue="post" />
+            <item index="11" class="java.lang.String" itemvalue="public" />
+            <item index="12" class="java.lang.String" itemvalue="setupfiles" />
+            <item index="13" class="java.lang.String" itemvalue="get" />
+            <item index="14" class="java.lang.String" itemvalue="universe" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
