@@ -30,7 +30,11 @@ class FusionGenerator(nn.Module):
         self.final_out_dim = output_nc
         act_fn = nn.LeakyReLU(0.2, inplace=True)
         act_fn_2 = nn.ReLU()
+
+        print("\n------Initiating FusionNet------\n")
+
         # encoder
+
         self.down_1 = Conv_residual_conv(self.in_dim, self.out_dim, act_fn)
         self.pool_1 = maxpool()
         self.down_2 = Conv_residual_conv(self.out_dim, self.out_dim * 2, act_fn)
@@ -39,8 +43,13 @@ class FusionGenerator(nn.Module):
         self.pool_3 = maxpool()
         self.down_4 = Conv_residual_conv(self.out_dim * 4, self.out_dim * 8, act_fn)
         self.pool_4 = maxpool()
+
+        # bridge
+
         self.bridge = Conv_residual_conv(self.out_dim * 8, self.out_dim * 16, act_fn)
+
         # decoder
+
         self.deconv_1 = conv_trans_block(self.out_dim * 16, self.out_dim * 8, act_fn_2)
         self.up_1 = Conv_residual_conv(self.out_dim * 8, self.out_dim * 8, act_fn_2)
         self.deconv_2 = conv_trans_block(self.out_dim * 8, self.out_dim * 4, act_fn_2)
@@ -51,6 +60,7 @@ class FusionGenerator(nn.Module):
         self.up_4 = Conv_residual_conv(self.out_dim, self.out_dim, act_fn_2)
 
         # output
+
         self.out = nn.Conv2d(self.out_dim,self.final_out_dim, kernel_size=3, stride=1, padding=1)
         self.out_2 = nn.Tanh()
 
