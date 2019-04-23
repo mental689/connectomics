@@ -1,5 +1,7 @@
 FusionNet with examples in Lucchi++ dataset
 =====
+[![DOI](https://zenodo.org/badge/181925866.svg)](https://zenodo.org/badge/latestdoi/181925866)
+
 
 ## Example
 
